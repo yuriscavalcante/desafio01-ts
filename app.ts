@@ -1,9 +1,14 @@
-import { CompanyAccount } from './class/CompanyAccount'
-import { PeopleAccount } from './class/PeopleAccount'
-
-const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Nath', 10)
-console.log(peopleAccount)
-peopleAccount.deposit()
-const companyAccount: CompanyAccount = new CompanyAccount('DIO', 20)
-companyAccount.deposit()
-console.log(companyAccount)
+import { CompanyAccount } from "./class/CompanyAccount";
+import { NewPeopleAccount } from "./class/NewPeopleAccount";
+import { PeopleAccount } from "./class/PeopleAccount";
+const peopleAccount: PeopleAccount = new PeopleAccount(1, "Nath", 10);
+peopleAccount.deposit(20);
+peopleAccount.getBalance();
+peopleAccount.withdraw(10);
+peopleAccount.getBalance();
+peopleAccount.getStatus();
+const companyAccount: CompanyAccount = new CompanyAccount("DIO", 20);
+companyAccount.getLoan(30);
+companyAccount.getBalance();
+const newPeopleAccount: NewPeopleAccount = new NewPeopleAccount("Yuri", 2);
+newPeopleAccount.newDeposit(40);
